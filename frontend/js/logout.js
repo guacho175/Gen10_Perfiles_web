@@ -40,7 +40,6 @@ function cerrarSesion() {
 
 // Función para inicializar los botones de cerrar sesión
 function initLogoutButtons() {
-  console.log("Inicializando botones de logout");
 
   // 1. Buscar botones que ya tengan el atributo onclick="cerrarSesion()"
 
@@ -55,7 +54,6 @@ function initLogoutButtons() {
       text.toLowerCase().includes("cerrar sesión") ||
       text.toLowerCase().includes("cerrar sesion")
     ) {
-      console.log("Encontrado botón de logout:", text);
 
       // Si no tiene ya un atributo onclick
       if (!link.hasAttribute("onclick")) {
@@ -73,7 +71,6 @@ function initLogoutButtons() {
     ".dropdown-content .button-53"
   );
   if (dropdownLogoutBtn) {
-    console.log("Encontrado botón de logout en dropdown");
 
     if (!dropdownLogoutBtn.hasAttribute("onclick")) {
       dropdownLogoutBtn.addEventListener("click", function (e) {

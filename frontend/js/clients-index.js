@@ -1,12 +1,9 @@
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('Inicializando carrusel de clientes...');
-    
+document.addEventListener('DOMContentLoaded', function() {    
     // Verificar que la API_URL_PHP esté correctamente configurada
     if (!window.API_URL_PHP) {
         console.error('API_URL_PHP no está definida');
         return;
     }
-    console.log('API_URL_PHP:', window.API_URL_PHP);
 
     // Obtener el contenedor donde se mostrarán los clientes
     const clientsCarousel = document.getElementById('clientsCarousel');
@@ -15,28 +12,21 @@ document.addEventListener('DOMContentLoaded', function() {
         console.error('No se encontró el carrusel de clientes');
         return;
     }
-    console.log('Contenedor del carrusel encontrado:', clientsCarousel);
 
     // Realizar la solicitud para obtener los clientes
-    console.log('Realizando solicitud a:', `${window.API_URL_PHP}read_client.php`);
     fetch(`${window.API_URL_PHP}read_client.php`)
         .then(response => {
-            console.log('Respuesta recibida:', response);
             return response.json();
         })
         .then(data => {
-            console.log('Datos recibidos:', data);
             if (data.success) {
                 // Limpiar el contenedor antes de agregar los clientes
                 clientsCarousel.innerHTML = '';
                 
                 if (!data.clients || data.clients.length === 0) {
-                    console.log('No hay clientes para mostrar');
                     clientsCarousel.innerHTML = '<p class="no-clients">No hay clientes disponibles en este momento.</p>';
                     return;
                 }
-                
-                console.log(`Mostrando ${data.clients.length} clientes`);
                 
                 // Mostrar los clientes
                 data.clients.forEach((client, index) => {
