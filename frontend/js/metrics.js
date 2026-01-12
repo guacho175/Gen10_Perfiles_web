@@ -1,4 +1,3 @@
-console.log('Cargando métricas...');
 
 // Se pide el contenido de metrics.php
 fetch(`${window.API_URL_PHP}metrics.php`) // Para Deploy: 'https://kreative.alphadocere.cl/backend/metrics.php'
