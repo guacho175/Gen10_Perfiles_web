@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Órdenes de Servicio</title>
-  <link rel="stylesheet" href="../frontend/css/admin/ordenes-servicios.css" />
-  <link rel="stylesheet" href="../frontend/css/base/footer.css" />
-  <link rel="stylesheet" href="./css/admin/index-admin.css" />
+  <link rel="stylesheet" href="../../public/css/admin/ordenes-servicios.css" />
+  <link rel="stylesheet" href="../../public/css/base/footer.css" />
+  <link rel="stylesheet" href="../../public/css/admin/index-admin.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <!-- Librería SheetJS para exportar a Excel -->
@@ -24,9 +24,9 @@
       </div>
       <div class="navbar" id="navbar">
         <ul class="headernav">
-          <li><a class="button-53" href="../frontend/ordenes-servicios.html">Ordenes Servicios</a></li>
-          <li><a class="button-53" href="../frontend/proyectos-admin.html">Proyectos</a></li>
-          <li><a class="button-53" href="../frontend/index-admin.html">Panel de Administración</a></li>
+          <li><a class="button-53" href="ordenes-servicios.html">Ordenes Servicios</a></li>
+          <li><a class="button-53" href="../admin/proyectos-admin.html">Proyectos</a></li>
+          <li><a class="button-53" href="../admin/index-admin.html">Panel de Administración</a></li>
         </ul>
       </div>
       <div class="hamburger" id="hamburger">
@@ -218,17 +218,17 @@
   </footer>-->
   <div id="footer-container"></div>
   <script>
-    fetch('../frontend/components/footer.html')
+    fetch('../../components/footer.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('footer-container').innerHTML = data;
       });
   </script>
 
-  <script src="../frontend/js/verifylogin.js"></script>
-  <script src="../frontend/js/ordenes-servicios.js"></script>
-  <script src="../frontend/js/logout.js"></script>
-  <script src="../frontend/js/timeout.js"></script>
-  <script src="../frontend/js/hamburger-menu.js"></script>
+  <script src="../../public/js/verifylogin.js"></script>
+  <script src="../../public/js/ordenes-servicios.js"></script>
+  <script src="../../public/js/logout.js"></script>
+  <script src="../../public/js/timeout.js"></script>
+  <script src="../../public/js/hamburger-menu.js"></script>
 </body>
 </html>
