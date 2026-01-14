@@ -14,6 +14,10 @@ window.FRONTEND_BASE = isLocalHost
   ? `${window.location.origin}${localBasePath}/frontend/`
   : 'https://kreative.alphadocere.cl/frontend/';
 
+window.ASSETS_BASE = isLocalHost
+  ? `${window.location.origin}${localBasePath}/assets/`
+  : 'https://kreative.alphadocere.cl/assets/';
+
 window.ROUTES = {
   profileDetail: (id) =>
     `${window.FRONTEND_BASE}index.php?page=perfiles/profile-template&id=${encodeURIComponent(id)}`,

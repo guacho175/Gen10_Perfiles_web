@@ -1,7 +1,10 @@
 // Función para cargar los proyectos del usuario
 async function cargarProyectosUsuario(userId) {
     try {
-        const response = await fetch(`../../backend/get_user_projects.php?user_id=${userId}`);
+        if (!window.API_URL_PHP) {
+            throw new Error('API_URL_PHP no está definida');
+        }
+        const response = await fetch(`${window.API_URL_PHP}get_user_projects.php?user_id=${userId}`);
         const data = await response.json();
         
         if (data.success) {
@@ -33,6 +36,10 @@ function mostrarProyectosUsuario(projects) {
             month: 'long',
             day: 'numeric'
         });
+
+        const projectUrl = window.ROUTES?.projectDetail
+            ? window.ROUTES.projectDetail(project.id_proyecto)
+            : `${window.FRONTEND_BASE}index.php?page=project/proyecto-detalle&id=${project.id_proyecto}`;
         
         projectsHTML += `
             <div class="project-card">
@@ -45,7 +52,7 @@ function mostrarProyectosUsuario(projects) {
                     ${project.ubicacion ? `<p class="project-location"><strong>Ubicación:</strong> ${escapeHtml(project.ubicacion)}</p>` : ''}
                 </div>
                 <div class="project-footer">
-                    <a href="../proyecto-detalle.php?id=${project.id_proyecto}" class="project-link" target="_blank">
+                    <a href="${projectUrl}" class="project-link" target="_blank">
                         Ver proyecto completo <i class="fas fa-external-link-alt"></i>
                     </a>
                 </div>

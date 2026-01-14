@@ -26,12 +26,16 @@ function mostrarProyectos(proyectos) {
         const div = document.createElement("div");
         div.classList.add("proyecto");
 
+        const projectUrl = window.ROUTES?.projectDetail
+          ? window.ROUTES.projectDetail(proyecto.id_proyecto)
+          : `${window.FRONTEND_BASE}index.php?page=project/proyecto-detalle&id=${proyecto.id_proyecto}`;
+
         div.innerHTML = `
             <div class="proyecto-timeline">
                 <div class="proyecto-fecha">${proyecto.fecha}</div>
                 <div class="proyecto-linea"></div>
                 <div class="proyecto-tarjeta">
-                    <a href="frontend/proyecto-detalle.php?id=${proyecto.id_proyecto}" class="proyecto-titulo">${proyecto.titulo_tarjeta}</a>
+                    <a href="${projectUrl}" class="proyecto-titulo">${proyecto.titulo_tarjeta}</a>
                 </div>
             </div>
         `;
