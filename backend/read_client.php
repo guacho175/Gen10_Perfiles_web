@@ -4,7 +4,7 @@ header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
 header('Content-Type: application/json');
 
-include 'conexion.php';
+require_once __DIR__ . '/conexion.php';
 
 $clientid = isset($_GET['id']) ? $_GET['id'] : null;
 

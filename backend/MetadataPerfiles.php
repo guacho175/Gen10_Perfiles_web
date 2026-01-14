@@ -5,7 +5,8 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 // Incluir la conexión a la base de datos
-include 'conexion.php';
+require_once __DIR__ . '/conexion.php';
+require_once __DIR__ . '/../frontend/config.php';
 
 // Recuperar el ID del perfil
 $id = isset($_GET['id']) ? $_GET['id'] : null;
@@ -37,7 +38,7 @@ if ($imageRow) {
 
 // 4) Definir las demás variables para las meta etiquetas
 $metaTitle       = "Perfil de " . $profile['name'] . " - Kreative Alpha Docere";
-$metaUrl         = "https://ms.alphadocere.cl/perfiles/profile-template.php?id=" . urlencode($id);
+$metaUrl         = frontend_route('perfiles/profile-template', ['id' => $id]);
 $metaDescription = "Innovación y creatividad al servicio de nuevas ideas.";
 
 // Imprimir las meta etiquetas

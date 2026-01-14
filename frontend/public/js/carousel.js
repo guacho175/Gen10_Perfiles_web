@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <h2>${profile.name}</h2>
           <p>${profile.phrase}</p>
           <p>${shortDescription}</p>
-          <a href="./frontend/perfiles/profile-template.php?id=${profile.id}" class="perfil">Ver más</a>
+          <a href="${window.ROUTES.profileDetail(profile.id)}" class="perfil">Ver más</a>
         </div>
       `;
       carousel.appendChild(profileCard);

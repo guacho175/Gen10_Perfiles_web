@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", async function () {
                     <div class="participantes-container">
                         ${proyecto.detalles.participantes.map(participante => `
                             <div class="participante">
-                                <a href="./perfiles/profile-template.php?id=${participante.id}" class="participante-enlace">
+                                <a href="${window.ROUTES.profileDetail(participante.id)}" class="participante-enlace">
                                     <img src="${participante.imagen}" class="imagen-participante" alt="Participante">
                                     <p class="nombre-participante">${participante.nombre}</p>
                                 </a>

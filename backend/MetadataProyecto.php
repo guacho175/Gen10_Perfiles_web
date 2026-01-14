@@ -1,5 +1,6 @@
 <?php
-include 'conexion.php';
+require_once __DIR__ . '/conexion.php';
+require_once __DIR__ . '/../frontend/config.php';
 
 $id = isset($_GET['id']) ? $_GET['id'] : null;
 if (!$id) {
@@ -17,7 +18,7 @@ if (!$proyecto) {
 
 //definir las variables para las meta etiquetas:
 $metaTitle = $proyecto['titulo_tarjeta'] . " - Desarrollado por Kreative Alpha Docere";
-$metaUrl = "https://ms.alphadocere.cl/frontend/proyecto-detalle.php?id=" . urlencode($id);
+$metaUrl = frontend_route('project/proyecto-detalle', ['id' => $id]);
 $metaDescription = substr($proyecto['descripcion_tarjeta'], 0, 200) . "...";
 $metaImage = "https://kreative.alphadocere.cl/assets/img/proyectos.jpg";
 

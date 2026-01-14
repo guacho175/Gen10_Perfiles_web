@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 }
 
 // Incluir el archivo de conexión
-require_once 'conexion.php';
+require_once __DIR__ . '/conexion.php';
 
 try {
     // Obtener datos de la solicitud
