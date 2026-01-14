@@ -28,7 +28,7 @@ function mostrarProyectos(proyectos) {
 
         div.innerHTML = `
             <div class="proyecto-timeline">
-                <div class="proyecto-fecha">${proyecto.fecha}</div>
+                <div class="proyecto-fecha">${formatearFechaDDMMYYYY(proyecto.fecha)}</div>                
                 <div class="proyecto-linea"></div>
                 <div class="proyecto-tarjeta">
                     <a href="frontend/proyecto-detalle.php?id=${proyecto.id_proyecto}" class="proyecto-titulo">${proyecto.titulo_tarjeta}</a>

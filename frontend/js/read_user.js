@@ -40,24 +40,34 @@ document.addEventListener("DOMContentLoaded", async function () {
         const experienceSection = document.getElementById('experience-section');
         const experienceData = profile.experience || [];
         experienceSection.innerHTML = experienceData.map(exp => `
-            <div class="experience-sub-section">
-                <h3 class="experience-sub-title">${exp.title || 'titulo no disponible'}</h3>
-                <span class="text-primary">${exp.startdate || 'Fecha de inicio no disponible'} - ${exp.enddate || 'Fecha de finalización no disponible'}</span>
-            </div>
+        <div class="experience-sub-section">
+            <h3 class="experience-sub-title">${exp.title || 'titulo no disponible'}</h3>
+            <span class="text-primary">
+            ${exp.startdate ? formatearFechaDDMMYYYY(exp.startdate) : 'Fecha de inicio no disponible'}
+            -
+            ${exp.enddate ? formatearFechaDDMMYYYY(exp.enddate) : 'Fecha de finalización no disponible'}
+            </span>
+        </div>
         `).join('');
+
 
         // Educación
         const educationSection = document.getElementById('timeline');
         const educationData = profile.education || [];
         educationSection.innerHTML = educationData.map(edc => `
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <h3 class="mb-0">${edc.title || 'titulo no disponible'}</h3>
-                    <span class="text-primary">${edc.startdate || 'Fecha de inicio no disponible'} - ${edc.enddate || 'Fecha de finalización no disponible'}</span>
-                    <div class="subheading mb-3">${edc.institution || 'Institución no disponible'}</div>
-                </div>
+        <div class="timeline-item">
+            <div class="timeline-content">
+            <h3 class="mb-0">${edc.title || 'titulo no disponible'}</h3>
+            <span class="text-primary">
+                ${edc.startdate ? formatearFechaDDMMYYYY(edc.startdate) : 'Fecha de inicio no disponible'}
+                -
+                ${edc.enddate ? formatearFechaDDMMYYYY(edc.enddate) : 'Fecha de finalización no disponible'}
+            </span>
+            <div class="subheading mb-3">${edc.institution || 'Institución no disponible'}</div>
             </div>
+        </div>
         `).join('');
+
         
         // Intereses
         document.getElementById('p-interest-section').innerHTML = `<p>${profile.interest}</p>`;

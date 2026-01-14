@@ -122,6 +122,7 @@
         </div>        
         </div> 
         <script src="../js/config.js"></script>
+        <script src="../js/utils.js"></script>
         <script src="../js/read_user.js" crossorigin="anonymous"></script>
         <script src="../js/resenas.js"></script>
         <script src="../js/user-projects.js"></script>
