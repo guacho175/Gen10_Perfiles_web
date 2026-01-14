@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <?php include '../backend/MetadataProyecto.php'; ?>
+    <?php require_once __DIR__ . '/../../config.php'; ?>
+    <?php require_once __DIR__ . '/../../../backend/MetadataProyecto.php'; ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalle del Proyecto</title>
     
-    <link href="../frontend/css/admin/proyecto-detalle.css" rel="stylesheet" />    
-    <link href="../frontend/css/base/index.css" rel="stylesheet" />
-    <link rel="stylesheet" href="../frontend/css/footer.css">
+    <link href="<?php echo htmlspecialchars(frontend_url('public/css/admin/proyecto-detalle.css')); ?>" rel="stylesheet" />    
+    <link href="<?php echo htmlspecialchars(frontend_url('public/css/base/index.css')); ?>" rel="stylesheet" />
+    <link rel="stylesheet" href="<?php echo htmlspecialchars(frontend_url('public/css/base/footer.css')); ?>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="icon" href="../assets/img/letra-k (1).png" type="image/x-icon">
+    <link rel="icon" href="<?php echo htmlspecialchars(frontend_url('assets/img/letra-k (1).png')); ?>" type="image/x-icon">
 </head>
 <body>
     <header>
         <nav>
             <div class="nav-left">
-                <img src="../assets/img/kreative_transparent.png" alt="Kreative Logo" class="nav-logo">
+                <img src="<?php echo htmlspecialchars(frontend_url('assets/img/kreative_transparent.png')); ?>" alt="Kreative Logo" class="nav-logo">
             </div>
 <!--             <div class="nav-center">
                 <ul class="nav-links" id="nav-links">
@@ -48,20 +49,15 @@
    
     <div id="footer-container"></div>
     <script>
-      fetch('../frontend/components/footer.html')
+      fetch('<?php echo htmlspecialchars(frontend_url('components/footer.html')); ?>')
         .then(response => response.text())
         .then(data => {
           document.getElementById('footer-container').innerHTML = data;
         });
     </script>
     
-    <link rel="stylesheet" href="../frontend/css/base/footer.css">
-
-
-
-    <script src="./js/project-detail.js"></script>
-    <script src="./js/config.js"></script>
-    <script src="../frontend/js/config.js"></script>
-    <script src="../frontend/js/logout.js"></script>
+    <script src="<?php echo htmlspecialchars(frontend_url('public/js/config.js')); ?>"></script>
+    <script src="<?php echo htmlspecialchars(frontend_url('public/js/project-detail.js')); ?>"></script>
+    <script src="<?php echo htmlspecialchars(frontend_url('public/js/logout.js')); ?>"></script>
 </body>
 </html>

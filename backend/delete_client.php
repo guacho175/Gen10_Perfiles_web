@@ -5,7 +5,7 @@ header("Content-Type: application/json");
 header("Access-Control-Allow-Methods: DELETE, GET");
 
 // Incluir archivo de conexión
-require_once('conexion.php');
+require_once __DIR__ . '/conexion.php';
 
 // Verificar si se proporcionó un ID de cliente
 if (!isset($_GET['id']) || empty($_GET['id'])) {

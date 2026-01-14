@@ -1,7 +1,7 @@
 <?php
 header("Access-Control-Allow-Origin: *"); 
 
-include 'conexion.php';
+require_once __DIR__ . '/conexion.php';
 
 // Hacer un COUNT(*) de PROYECTOS ---
 $sqlProyectos = "SELECT COUNT(*) AS total_proyectos FROM proyectos";

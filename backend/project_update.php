@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     exit();
 }
 
-require_once 'conexion.php';
+require_once __DIR__ . '/conexion.php';
 
 try {
     // Modificamos para aceptar tanto JSON como form-data

@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <?php include '../../backend/MetadataPerfiles.php';?>
+    <?php require_once __DIR__ . '/../../config.php'; ?>
+    <?php require_once __DIR__ . '/../../../backend/MetadataPerfiles.php'; ?>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Resume</title>
-        <link rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="<?php echo htmlspecialchars(frontend_url('assets/img/favicon.ico')); ?>" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />   
-        <link href="../css/cliente/profile-templates-styles.css" rel="stylesheet" />
-        <link href="../css/cliente/user-projects.css" rel="stylesheet" />
+        <link href="<?php echo htmlspecialchars(frontend_url('public/css/cliente/profile-templates-styles.css')); ?>" rel="stylesheet" />
+        <link href="<?php echo htmlspecialchars(frontend_url('public/css/cliente/user-projects.css')); ?>" rel="stylesheet" />
     </head>
     <body id="top">
         <nav class="navbar" id="sideNav">
@@ -121,9 +122,9 @@
                 
         </div>        
         </div> 
-        <script src="../public/js/config.js"></script>
-        <script src="../public/js/read_user.js" crossorigin="anonymous"></script>
-        <script src="../public/js/resenas.js"></script>
-        <script src="../public/js/user-projects.js"></script>
+        <script src="<?php echo htmlspecialchars(frontend_url('public/js/config.js')); ?>"></script>
+        <script src="<?php echo htmlspecialchars(frontend_url('public/js/read_user.js')); ?>" crossorigin="anonymous"></script>
+        <script src="<?php echo htmlspecialchars(frontend_url('public/js/resenas.js')); ?>"></script>
+        <script src="<?php echo htmlspecialchars(frontend_url('public/js/user-projects.js')); ?>"></script>
     </body>
 </html>

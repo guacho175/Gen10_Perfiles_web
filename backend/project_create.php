@@ -10,7 +10,7 @@ header("Access-Control-Allow-Methods: POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
 header('Content-Type: application/json');
 
-include 'conexion.php';
+require_once __DIR__ . '/conexion.php';
 
 // Maneja solicitudes OPTIONS para CORS
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {

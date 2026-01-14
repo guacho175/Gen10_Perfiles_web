@@ -9,7 +9,7 @@ header("Access-Control-Allow-Headers: Content-Type");
 header('Content-Type: application/json');
 
 //Manejo de la conexión
-require_once 'conexion.php';
+require_once __DIR__ . '/conexion.php';
 
 try {
     //Se obtienen los datos de la solicitud

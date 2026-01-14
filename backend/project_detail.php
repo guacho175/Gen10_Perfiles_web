@@ -2,7 +2,7 @@
 header("Access-Control-Allow-Origin: *"); // Permite solicitudes desde cualquier origen
 header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type, Authorization");
-include 'conexion.php';
+require_once __DIR__ . '/conexion.php';
 
 // Verificar si se proporciona un ID de proyecto en la URL
 if (!isset($_GET['id']) || empty($_GET['id'])) {

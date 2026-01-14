@@ -4,7 +4,7 @@ header("Access-Control-Allow-Methods: GET");
 header("Access-Control-Allow-Headers: Content-Type");
 header('Content-Type: application/json');
 
-include 'conexion.php';     
+require_once __DIR__ . '/conexion.php';     
 
 if (isset($_GET['id']) && !empty($_GET['id'])) {
     $profile_id = intval($_GET['id']);  
