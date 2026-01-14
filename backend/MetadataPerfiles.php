@@ -37,7 +37,7 @@ if ($imageRow) {
 
 // 4) Definir las demás variables para las meta etiquetas
 $metaTitle       = "Perfil de " . $profile['name'] . " - Kreative Alpha Docere";
-$metaUrl         = "https://ms.alphadocere.cl/perfil/profile-template.php?id=" . urlencode($id);
+$metaUrl         = "https://ms.alphadocere.cl/perfiles/profile-template.php?id=" . urlencode($id);
 $metaDescription = "Innovación y creatividad al servicio de nuevas ideas.";
 
 // Imprimir las meta etiquetas
