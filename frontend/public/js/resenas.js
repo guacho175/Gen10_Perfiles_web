@@ -1,12 +1,15 @@
 const stars = document.querySelectorAll('.star');
 const ratingDisplay = document.getElementById('rating-display');
 let selectedRating = 0;
+const starEmptySrc = window.ASSETS_BASE ? `${window.ASSETS_BASE}img/star001.png` : '../assets/img/star001.png';
+const starFilledSrc = window.ASSETS_BASE ? `${window.ASSETS_BASE}img/star.png` : '../assets/img/star.png';
+
 stars.forEach(star => {
   star.addEventListener('click', () => {
     selectedRating = star.getAttribute('data-value');
-    stars.forEach(s => s.src = '../assets/img/star001.png');
+    stars.forEach(s => s.src = starEmptySrc);
     for (let i = 0; i < selectedRating; i++) {
-      stars[i].src = '../assets/img/star.png';
+      stars[i].src = starFilledSrc;
     }
   });
 });
@@ -21,8 +24,8 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   const addReviewLink = document.getElementById('add-review-link');
-  if (addReviewLink) {
-      addReviewLink.href = `../resenas.html?id=${profileId}`;
+  if (addReviewLink && profileId) {
+      addReviewLink.href = `${window.FRONTEND_BASE}resenas.html?id=${profileId}`;
   }
 });
 

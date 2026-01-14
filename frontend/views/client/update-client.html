@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestión de Perfil</title>
-    <link rel="stylesheet" href="../frontend/css/admin/crud-profile-styles.css">
+    <link rel="stylesheet" href="../../public/css/admin/crud-profile-styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 <body>
@@ -15,7 +15,7 @@
         <div class="forma-1"> 
             <form id="userForm">
                 <input type="hidden" id="userId">
-                <button class="fass-1" onclick="window.location.href='../frontend/index-admin.html'"><i class="fas fa-arrow-left"></i></button>
+                <button class="fass-1" onclick="window.location.href='../admin/index-admin.html'"><i class="fas fa-arrow-left"></i></button>
                 <h3 class="info">Información Personal</h3>
                 <label for="input-name">Nombre:</label>
                 <input type="text" id="input-name" required>
@@ -44,7 +44,7 @@
 
                 <div class="button-container">
                     <button type="submit">Guardar</button>
-                    <button type="button" onclick="window.location.href='../frontend/index-admin.html'">Volver</button>
+                    <button type="button" onclick="window.location.href='../admin/index-admin.html'">Volver</button>
 
                 </div>
     
@@ -60,10 +60,10 @@
             <button onclick="addItem()">actualizar</button>
         </div>
     </div>
-    <script src="./js/verifylogin.js"></script>
-    <script src="./js/config.js"></script>
-    <script src="./js/update_client.js"></script>
+    <script src="../../public/js/verifylogin.js"></script>
+    <script src="../../public/js/config.js"></script>
+    <script src="../../public/js/update_client.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="../frontend/js/logout.js"></script>    
+    <script src="../../public/js/logout.js"></script>    
 </body>
 </html>

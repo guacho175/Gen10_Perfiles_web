@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             `;
         }
 
-        // Participantes <a href="/Gen10_Perfiles_web/frontend/perfiles?id=${participante.id}" class="participante-enlace">
+        // Participantes <a href="/Gen10_Perfiles_web/frontend/index.php?page=perfiles/profile-template&id=${participante.id}" class="participante-enlace">
         if (proyecto.detalles?.participantes?.length > 0) {
             html += `
                 <section class="participantes">
